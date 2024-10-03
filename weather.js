@@ -1,6 +1,6 @@
-// https://api.openweathermap.org/data/2.5/weather?lat=48.8575&lon=2.3514&appid={api-key}
+// https://api.openweathermap.org/data/2.5/weather?lat=48.8575&lon=2.3514&appid={964c92af9abfd53d27f21227cb8eab94}
 
-import { getReports, saveReport } from "./report-data";
+import { getReports, saveReport } from "./report-data.js";
 
 function addNewMoodEventListener() {
   console.log("it works")
@@ -11,7 +11,7 @@ function addNewMoodEventListener() {
     const mood = event.target.querySelector('[name=mood]').value;
 
     // Send the mood to your server here
-    fetch("https://api.openweathermap.org/data/2.5/weather?lat=48.8575&lon=2.3514&appid={api-key}")
+    fetch("https://api.openweathermap.org/data/2.5/weather?lat=48.8575&lon=2.3514&appid=964c92af9abfd53d27f21227cb8eab94")
       .then(response => response.json())
       .then(data => {
         const weather = data
